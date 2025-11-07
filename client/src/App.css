@@ -1,0 +1,282 @@
+/* Trisha's CSS file */
+
+/* ========== STYLES THROUGHOUT ========== */
+
+body {
+  color: black;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* ========== HEADER STYLES ========== */
+
+/* maintain equal spacing between EVERY item for the header */
+header {
+  background-color: #dc4c3e;
+  color: #ffffff;
+  display: grid;   
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+
+
+/* Should contain the Icon and searchbox */
+.header-nav-container {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  max-width: 300px;
+  padding-left: 30px;
+  gap: 5px;
+
+}
+
+/* Should Checkmark and numbers */
+.header-end-item {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  padding-right: 30px;
+
+}
+
+/* Search input box */
+header .search-input[type=text] {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background: url('./assets/search_icon.png') no-repeat, white;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px 0px 10px 36px;
+  background-color: #dcb5b1ba;
+  background-position: 10px
+}
+
+/* Search Icon inside the search box */
+header .search-input[type=text]::placeholder {
+  color: white;
+}
+
+/* TODO: Color for Check mark */
+
+/* /* ========== Main Section ========== */
+.page-contents {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  padding-right: 30px;
+
+}
+
+/* ========== LEFT NAV STYLES ========== */
+nav {
+  max-width: 300px;
+  background-color: #fefbf2;
+  color: #000000;
+  min-height: 100vh;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  max-height: 2rem;
+  padding-left: 30px;
+  padding-right: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 16px
+  
+}
+
+nav li:hover {
+  cursor: pointer;
+}
+
+
+nav li article {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 4px
+}
+
+.task-count {
+  color: #7e7d79;
+  font-size: 12px
+}
+
+/* ========== MAIN CONTENT STYLES ========== */
+
+main {
+  margin-left: 30px;
+}
+
+main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+main h1 {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+main li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid #F5F5F5 1.5px;
+
+}
+
+main li label {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  gap: 5px
+}
+
+main li label input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  /* Required for Safari */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #807f7f75;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main li label input[type=checkbox]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+
+/* ========== RESPONSIVE STYLES ========== */
+
+@media (max-width: 480px) {
+  nav {
+      display: none;
+  }
+  .page-contents {
+      grid-template-columns: none   
+  }
+}
+
+/* ===== React additions for Assignment 2 ===== */
+
+/* the add-task form in main */
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.task-form button {
+  background-color: #dc4c3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* the little box that shows counts + filter buttons */
+.task-counter {
+  background-color: #fefbf2;
+  border: 1px solid #f5e9d0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.filter-buttons button {
+  background: white;
+  border: 1px solid #dc4c3e;
+  border-radius: 9999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background: #dc4c3e;
+  color: white;
+}
+
+/* task list from React */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  border-bottom: solid #f5f5f5 1.5px;
+  padding: 6px 0;
+}
+
+.task-item label {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #7e7d79;
+}
+
+.task-item button {
+  background: transparent;
+  border: none;
+  color: #dc4c3e;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.empty-state {
+  font-style: italic;
+  color: #7e7d79;
+  margin-top: 10px;
+}
