@@ -1,4 +1,5 @@
-/* Trisha's CSS file */
+
+/* ===== Adapted from Assignment 1 ===== */
 
 /* ========== STYLES THROUGHOUT ========== */
 
@@ -23,9 +24,7 @@ header {
   border-top-right-radius: 5px
 }
 
-
-
-/* Should contain the Icon and searchbox */
+/* contain the Icon and searchbox */
 .header-nav-container {
   display: grid;
   grid-auto-flow: column;
@@ -37,7 +36,7 @@ header {
 
 }
 
-/* Should Checkmark and numbers */
+/* checkmark and numbers */
 .header-end-item {
   display: grid;
   grid-auto-flow: column;
@@ -47,7 +46,7 @@ header {
 
 }
 
-/* Search input box */
+/* search input box */
 header .search-input[type=text] {
   width: 100%;
   border: none;
@@ -63,12 +62,12 @@ header .search-input[type=text] {
   background-position: 10px
 }
 
-/* Search Icon inside the search box */
+/* search icon inside the search box */
 header .search-input[type=text]::placeholder {
   color: white;
 }
 
-/* TODO: Color for Check mark */
+
 
 /* /* ========== Main Section ========== */
 .page-contents {
@@ -77,6 +76,8 @@ header .search-input[type=text]::placeholder {
   padding-right: 30px;
 
 }
+
+
 
 /* ========== LEFT NAV STYLES ========== */
 nav {
@@ -106,7 +107,6 @@ nav li {
 nav li:hover {
   cursor: pointer;
 }
-
 
 nav li article {
   display: grid;
@@ -156,7 +156,6 @@ main li label {
 main li label input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
-  /* Required for Safari */
   width: 18px;
   height: 18px;
   border: 2px solid #807f7f75;
@@ -170,6 +169,7 @@ main li label input[type=checkbox]:checked {
 }
 
 
+
 /* ========== RESPONSIVE STYLES ========== */
 
 @media (max-width: 480px) {
@@ -181,9 +181,11 @@ main li label input[type=checkbox]:checked {
   }
 }
 
-/* ===== React additions for Assignment 2 ===== */
 
-/* the add-task form in main */
+
+/* ===== Added for Assignment 2 ===== */
+
+/* add-task form in main */
 .task-form {
   display: flex;
   gap: 8px;
@@ -207,7 +209,7 @@ main li label input[type=checkbox]:checked {
   cursor: pointer;
 }
 
-/* the little box that shows counts + filter buttons */
+/* the little box that shows counts and filter buttons */
 .task-counter {
   background-color: #fefbf2;
   border: 1px solid #f5e9d0;

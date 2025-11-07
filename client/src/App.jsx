@@ -58,7 +58,6 @@ function App() {
             type="text"
             className="search-input"
             placeholder="Search"
-            // this search box is just for looks right now
           />
         </div>
 
@@ -125,7 +124,7 @@ function App() {
           {/* add form */}
           <TaskForm onAddTask={addTask} />
 
-          {/* counter + filter buttons (React-specific) */}
+          {/* counter + filter buttons */}
           <TaskCounter
             totalCount={totalCount}
             completedCount={completedCount}
